@@ -1,0 +1,718 @@
+1. abcd to hello a
+  #include<stdio.h>
+#include<windows.h>
+void sleep(unsigned milliseconds)
+{
+    Sleep(milliseconds);
+}
+void main()
+{
+    for (int i=65;i<=72;i++)
+    {
+        Sleep(50);
+        printf("%c\n",i);
+    }
+    for (int i=65;i<=69;i++)
+    {
+        Sleep(50);
+        printf("H%c\n",i);
+    }
+    for (int i=65;i<=76;i++)
+    {
+        Sleep(50);
+        printf("HE%c\n",i);
+    }
+    for (int i=65;i<=76;i++)
+    {
+        Sleep(50);
+        printf("HEL%c\n",i);
+    }
+    for (int i=65;i<=79;i++)
+    {
+        Sleep(50);
+        printf("HELL%c\n",i);
+    }
+    for (int i=65;i<=87;i++)
+    {
+        Sleep(50);
+        printf("HELLO %c\n",i);
+    }
+    for (int i=65;i<=79;i++)
+    {
+        Sleep(50);
+        printf("HELLO W%c\n",i);
+    }
+    for (int i=65;i<=82;i++)
+    {
+        Sleep(50);
+        printf("HELLO WO%c\n",i);
+    }
+    for (int i=65;i<=76;i++)
+    {
+        Sleep(50);
+        printf("HELLO WOR%c\n",i);
+    }
+    for (int i=65;i<=68;i++)
+    {
+        Sleep(50);
+        printf("HELLO WORL%c\n",i);
+    }
+    printf("HELLO WORLD!");
+
+}
+
+2. adding two numbers
+  #include<stdio.h>
+main()
+{
+int a,b,s;
+int add(int a,int b);
+printf("Enter two numbers\n");
+scanf("%d%d",&a,&b);
+s=add(a,b);
+printf("sum=%d\n",s);
+}
+int add(int a,int b)
+{
+int sum;
+sum=a=b;
+return(sum);
+}
+
+3. area of circle
+  #include<stdio.h>
+#include<math.h>
+main()
+{
+float r,area;
+printf("enter the radius\n");
+scanf("%f",&r);
+area=3.142*r*r;
+printf("area = %f/n",area);
+}
+
+4. area of sphere
+  #include<stdio.h>
+#include<math.h>
+main()
+{
+float r,area;
+printf("enter the radius");
+scanf("%f",&r);
+area=3.14*r*r;
+printf("area=%f/n",area);
+}
+ 5. area of tringle by 3 sides
+   #include<stdio.h>
+#include<math.h>
+main()
+{
+float s1,s2,s3,s,area;
+printf("enter sides of the triangle");
+scanf("%f%f%f",&s1,&s2,&s3);
+s=s1+s2+s3/2;
+area=sqrt(s(s-s1)*(s-s2)*(s-s3));
+printf("area=%f\n",area);
+}
+
+6. biggest of two numebrs
+  #include<stdio.h>
+main()
+{
+float a,b;
+void biggest(float a,float b);
+printf("Enter two numbers\n");
+scanf("%f%f",&a,&b);
+biggest(a,b);
+}
+void biggest(float a,float b)
+{
+ if(a>b)
+{
+ printf("%f is greater\n",a);
+}
+ else
+{
+printf("%f is greater\n",b);
+}
+}
+
+6. biggest using udf
+  #include<stdio.h>
+main()
+{
+float a,b,big;
+float biggest(float a,float b);
+printf("Enter two numbers\n");
+scanf("%d%d",&a,&b);
+big=biggest(a,b);
+printf("Biggest of teo numbers=%f\n",big);
+}
+float biggest(float x,float y)
+{
+if(x>y)
+return(x);
+else
+return(y);
+}
+
+7. basic calculator
+#include<stdio.h>
+main()
+{
+int n1,n2,choice,sum,sub,mul,div;
+printf("Enter two numbers");
+scanf("%d%d",&n1,&n2);
+printf("Enter the choice");
+scanf("%d",&choice);
+if (choice==1)
+{
+sum=n1+n2;
+printf("sum=%d\n",sum);
+}
+else if(choice==2)
+{
+sub=n1-n2;
+printf("sub=%d\n",sub);
+}
+else if(choice==3)
+{
+mul=n1*n2;
+printf("mul=%d\n",mul);
+}
+else if(choice==4)
+{
+div=n1/n2;
+printf("div=%d\n",div);
+}
+else
+{
+printf("Invalid Choice\n");
+}
+}
+
+ 8. electricity bill using switch
+   #include<stdio.h>
+main(){
+int u;
+
+printf("enter the units used");
+scanf("%d",&u);
+switch(u){
+case 0 ... 100 :
+printf("Total charges =%d",u*1);
+break;
+case 101 ... 200 :
+printf("Total charges =%f",u*1.5);
+break;
+case 201 ... 450 :
+printf("Total charges =%d",u*2);
+break;
+default:
+printf("Total charges =%f",u*2.5);
+break;
+}
+}
+
+9. electricity bill 2
+  #include<stdio.h>
+main()
+{
+float tb;int u;
+printf("Enter the units consumed");
+scanf("%d",&u);
+if (u>=0 &&u<=100)
+{
+tb=u*1.0;
+printf("tb=%f\n",tb);
+}
+else if (u>=101 &&u<=200)
+{
+tb=u*1.5;
+printf("tb=%f\n",tb);
+}
+else if (u>=201 &&u<=450)
+{
+tb=u*1.5;
+printf("tb=%f\n",tb);
+}
+else
+{
+tb=u*2.5;
+printf("tb=%f\n",tb);
+}
+}
+
+10. even natural number
+  #include<stdio.h>
+main()
+{
+int i,n;
+printf("Enter the numbers\n");
+scanf("%d",&n);
+for(i=1;i<=n;i++)
+if(i%2==0)
+{
+printf("%d\n",i);
+}
+}
+
+11. even or odd
+  #include<stdio.h>
+main()
+{
+int a;
+void eo(int a);
+printf("Enter the Number\n");
+scanf("%d",&a);
+eo(a);
+}
+void eo(int a)
+{
+if(a%2==0)
+printf("the number is even\n");
+else
+printf("the number is oddd\n");
+}
+
+12. even or odd using switch
+  #include<stdio.h>
+main()
+{
+    int num;
+    printf("Enter a number : \n");
+    scanf("%d", &num);
+    switch(num%2)
+    {
+        case 0:printf("The entered number is EVEN");
+        break;
+        case 1:printf("The entered number is ODD");
+        break;
+    }
+
+}
+
+13. dicount in market
+  #include<stdio.h>
+main()
+{
+    float price,amount;
+    char item;
+    float bill(char item,float price);
+ printf("Enter the item and its price\n");
+ scanf("%c%f",&item,&price);
+ amount=bill(item,price);
+ printf("amount to be paid=%f\n",amount);
+}
+float bill(char item,float price)
+{
+    float amount;
+    if(item=='p' || item=='P')
+    {
+        if(price>0 && price<1000)
+        {
+            amount=price;
+        }
+        else if(price>1000)
+        {
+            amount=price-(price*0.05)+(price*0.02);
+        }
+        return(amount);
+    }
+   else if(item=='T' || item=='t')
+    { 
+     if(price>0 && price<1000)
+     {
+         amount=price-(price*3)+(price*1);
+     }
+     else if(price>20000)
+     {
+       amount=price-(price*5)+(price*2);
+     }
+     return(amount);
+    }
+}
+
+14. feet to inches
+  #include<stdio.h>
+#include<math.h>
+main()
+{
+float feet,inches;
+printf("enter the feet");
+scanf("%f",&feet);
+inches=12*feet;
+printf("m=%f\n",inches);
+}
+
+15. supermarket billing
+  #include<stdio.h>
+main()
+{
+float price,amt;
+char item;
+float bill(char item,float price);
+printf("Enter the item and its price\n");
+scanf("%c%f",&item,&price);
+amt=bill(item,price);
+printf("amount to be paid=%f\n",amt);
+}
+float bill(char item,float price)
+{
+float amount;
+if(item=='t' || item=='T')
+{
+if (price>1 && price<=1000)
+{
+amount=price;
+}
+else if (price>1001)
+{
+amount=price-(price*0.07);
+}
+return(amount);
+}
+
+else if(item=='c' || item=='C')
+{
+
+
+if (price>1 && price<5000)
+{
+amount=price-(price*0.03);
+}
+else if (price>5001)
+{
+amount=price-(price*0.13);
+}
+return(amount);
+}
+}
+
+16. greateer than or less than using switch
+  #include<stdio.h>
+main()
+{
+int p,q;
+printf("enter the values");
+scanf("%d%d",&p,&q);
+
+switch(p>q)
+{
+case  1 :
+printf("n1 is greater than n2");
+break;
+default:
+printf("n2 is greater than n1");
+break;
+}
+}
+
+17. hescom bill
+  #include<stdio.h>
+main()
+{
+int p;
+printf("Enter units consumed : \n");
+scanf("%d", &p);
+switch(p)
+{
+case 1 ... 100: printf("Total bill = %f\n", p*1.0);
+break;
+
+case 101 ... 200: printf("Total bill = %f\n", 100 + (p-100)*1.5);
+break;
+
+case 201 ... 450: printf("Total bill = %f\n", 250 + (p-200) * 2.0);
+break;
+
+default: printf("Total Bill = %f \n", 650 + (p-450)* 2.5);
+break;
+}
+}
+
+18. inches to cms
+  #include<stdio.h>
+#include<math.h>
+main()
+{
+   float inches,cms;
+   printf("Enter the values");
+   scanf("%f",&inches);
+   cms=inches*2.54;
+   printf("Cms= %f/n",cms);
+}
+
+19. income tax
+  #include<stdio.h>
+main()
+{
+float income,amt;
+char gender;
+float incometax(char gender,float income);
+printf("Enter the gender and income\n");
+scanf("%c%f",&gender,&income);
+amt=incometax(gender,income);
+printf("tax to be paid=%f",amt);
+}
+float incometax(char gender,float income)
+{
+float tax;
+if(gender=='m')
+{
+if(income>0 && income<=350000)
+{
+tax=0;
+}
+else if(income>350000 && income<=700000)
+{
+tax=income*0.05;
+}
+else if(income>700000 && income<=1200000)
+{
+tax=income*0.1;
+}
+else if(income>1200000)
+{
+tax=income*0.3;
+}
+return(tax);
+}
+
+else if(gender=='f')
+{
+if(income>0 && income<=300000)
+{
+tax=0;
+}
+else if(income>300000 && income<=650000)
+{
+tax=income*0.05;
+}
+else if(income>650000 && income<=1100000)
+{
+tax=income*0.1;
+}
+else if(income>1100000)
+{
+tax=income*0.3;
+}
+return(tax);
+}
+}
+
+20. income tax 2
+  #include<stdio.h>
+main()
+{
+float salary,tax_paid;
+printf("Enter the salary amount");
+scanf("%f",&salary);
+if (salary>=1 &&salary<=100000)
+{
+printf("No tax to be paid");
+}
+else if (salary>=100001 &&salary<=250000)
+{
+tax_paid=0.05*(salary-100000);
+printf("Tax to be paid=%f\n",tax_paid);
+}
+else if (salary>=250001 &&salary<=1000000)
+{
+tax_paid=7500+0.075*(salary-250000);
+printf("Tax to be paid=%f\n",tax_paid);
+}
+else
+{
+tax_paid=7500+56250+0.1*(salary-1000000);
+printf("Tax to be paid=%f\n",tax_paid);
+}
+}
+
+21. m to cms
+  #include<stdio.h>
+#include<math.h>
+main()
+{
+float m,cms;
+printf("enter meters");
+scanf("%f",&m);
+cms=100*m;
+printf("dist=%f\n",cms);
+}
+
+22. marks by students
+  #include<stdio.h>
+main()
+{
+int m;
+printf("enter the marks\n");
+scanf("%d",&m);
+if(m>=0 &&m<=39)
+{
+printf("fail\n");
+}
+else if(m>=40 && m<=59)
+{
+printf("pass\n");
+}
+else if(m>=60 &&m<=79)
+{
+printf("fisrt class\n");
+}
+else if(m>=80 &&m<=100)
+{
+printf("ditinction\n");
+}
+else
+{
+printf("invalid marks");
+}
+}
+
+23. miles to kms
+  #include<stdio.h>
+#include<math.h>
+main()
+{
+  float miles,kms;
+  printf("Enter the values");
+  scanf("%f",&miles);
+  kms=miles*1.609;
+  printf("Kms=%f/n",kms);
+}
+
+24. location of cordinates
+  #include<stdio.h>
+#include<math.h>
+main()
+{
+float x1,x2,y1,y2,dist;
+printf("enter coordinates of mohan and sohan");
+scanf("%f%f%f%f,&x1,&x2,&y1,&y2");
+dist=sqrt(pow(x2-x1,2)+pow(y2-y1,2));
+printf("distance=%f\n",dist);
+}
+
+25. simple calculator using symbols
+  #include<stdio.h>
+main()
+{
+int n1,n2,sum,sub,mul,div;
+char ch;
+printf("Enter two numbers\n");
+scanf("%d%d",&n1,&n2);
+printf("Enter the choice\n");
+fflush(stdin);
+scanf("%c,%c",&ch,&ch);
+switch(ch)
+{
+    case '+':sum=n1+n2;
+    printf("sum=%d\n",sum);
+    break;
+    case '-':sub=n1-n2;
+    printf("sub=%d\n",sub);
+    break;
+    case '*':mul=n1*n2;
+    printf("mul=%d\n",mul);
+    break;
+    case '/':div=n1/n2;
+    printf("div=%d\n",div);
+    break;
+    deafult: printf("invalid choice");
+    break;
+}
+}
+
+26. sum of first even numbers
+  #include<stdio.h>
+main()
+{
+int i,n,sum=0;
+printf("Enter the numbers\n");
+scanf("%d",&n);
+for(i=1;i<=n;i++)
+{
+{
+if(i%2==0)
+
+ sum=sum+i;
+}
+}
+printf("The sum of first %d natural nor=%d",n,sum);
+}
+
+27. swapping two numbers
+  #include<stdio.h>
+main()
+{
+int x,y;
+printf("enter 2 numbers\n");
+scanf("%d%d",&x,&y);
+printf("values before swapping\n");
+printf("x=%d\ny=%d\n",x,y);
+x=x+y;
+y=x-y;
+x=x-y;
+printf("values after swapping\n");
+printf("x=%d\ny=%d\n",x,y);
+}
+
+28. swapping two variables
+  #include<stdio.h>
+main()
+{
+int x,y,z;
+printf("enter 2 numbers\n");
+scanf("%d%d",&x,&y);
+printf("values before swapping\n");
+printf("x=%d\ny=%d\n",x,y);
+z=x;
+x=y;
+y=z;
+printf("values after swapping\n");
+printf("x=%d\ny=%d\n",x,y);
+}
+
+29. to print n natural numbers
+  #include<stdio.h>
+main()
+{
+int i,n;
+printf("Enter the numbers\n");
+scanf("%d",&n);
+for(i=1;i<=n;i++)
+{
+printf("%d\n",i);
+}
+}
+
+30. vowel or consonent
+  #include<stdio.h>
+main()
+{
+char ch;
+printf("enter the alphabet\n");
+scanf("%c",&ch);
+if (a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z,A,B,C,D,,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,,W,X,Y,Z)
+{
+switch(ch)
+{
+case 'a':
+case 'e':
+case 'i':
+case 'o':
+case 'u':
+case 'A':
+case 'E':
+case 'I':
+case 'O':
+case 'U':printf("Vowel\n");break;
+default :printf("Consonent\n");break;
+}
+}
+}
+s
+
+
+
